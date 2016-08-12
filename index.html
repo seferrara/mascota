@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+  
+	<title>Mascotas</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/funciones.js"></script>
+  <script src="https://use.fontawesome.com/76ff5bbde3.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   <script src="js/wow.js"></script>
+              <script>
+              new WOW().init();
+              </script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/animate.css">
+
+  <style>
+   @media(max-width:767px){
+
+      header {
+        height:200px !important;
+      }
+
+      header img {
+        height:300px;
+      }
+
+      #empresa {
+        height:550px;
+      }
+
+      #empresa h2 {
+        margin-top:60px !important;
+      }
+
+      h2 {
+        font-size:20px !important;
+      }
+
+      p {
+        font-size:15px !important;
+      }
+
+      #productos {
+        height:500px;
+        background-size:300%;
+      }
+
+      #calesita {
+        margin-top:-20px !important;
+      }
+
+      #productos img {
+        width:100px;
+        margin-top:20px;
+      }
+
+      #presupuesto {
+        height:1000px;
+      }
+
+      footer {
+        height:700px;
+      }
+   }
+
+   @media(min-width:768px){
+
+      #empresa {
+        height:500px;
+      }
+
+      #empresa h2 {
+        margin-top:60px !important;
+      }
+
+      footer {
+        height:500px;
+      }
+   }
+  </style>
+
+  <script>
+      var cant = 1;
+      var art = 1;
+      var id = 1;
+      function agregarCampos() {
+
+        /* Contamos la cantidad de selects y lo guardamos en una variable */
+
+       var cantiselect = $("select").size();
+
+       /* Segun la cantidad de selects ocultamos la opcion para agregar mas */
+
+       if(cantiselect == 26) {
+        $(".fa-plus").css("display", "none");
+       }
+
+        cant++
+        art++
+        id++
+        $( ".cantidades" ).append('<div style="margin-top:30px" class="col-md-12"><div class="form-group"><input name="cant'+cant+'" type="text" class="form-control" placeholder="Cant."><select name="art'+art+'" id="select'+id+'" class="form-control"><option value="0">Seleccionar</option><option value="Tobogan">Tobogan</option><option value="Hamaca">Hamaca</option><option value="Calesita">Calesita</option></select><select  name="artnum'+id+'" id="artselect'+id+'"class="form-control"><option value="0">Seleccionar</option></select></div></div>');
+      }
+  </script>
+</head>
+<body>
+
+	<nav style="display:none" class="navbar navbar-default navbar-fixed-top visible-xs visible-sm">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img style="width:100px;margin-top:-8px" src="img/logomascota.png" alt=""></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a class="desp" href="#home">Home <span class="sr-only">(current)</span></a></li>
+        <li><a class="desp" href="#empresa">La empresa</a></li>
+        <li><a class="desp" href="#productos">Productos</a></li>
+        <li><a class="desp" href="#presupuesto">Presupuesto</a></li>
+        <li><a class="desp" href="#contacto">Contacto</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+		<header id="home" class="hidden-xs hidden-sm">
+<div id="mask" style="width:100%;position:relative">
+			<img style="width:100%" id="Image-Maps-Com-image-maps-2016-08-05-162503" src="img/header.png" height="863" usemap="#image-maps-2016-08-05-162503" alt="" />
+<map name="image-maps-2016-08-05-162503">
+			<area class="desp" alt="" title="" href="#empresa" shape="rect" coords="193,223,319,251" style="outline:none;" target="_self"     />
+			<area class="desp" alt="" title="" href="#productos" shape="rect" coords="191,256,307,284" style="outline:none;" target="_self"     />
+			<area class="desp" alt="" title="" href="#presupuesto" shape="rect" coords="193,282,394,316" style="outline:none;" target="_self"     />
+			<area class="desp" alt="" title="" href="#contacto" shape="rect" coords="193,318,299,343" style="outline:none;" target="_self"     />
+			<area shape="rect" coords="1278,861,1280,863" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
+      <a class="desp" href="#empresa"><i style="position:absolute;top:70%;left:92%;color:#87D37C" class="animated bounce infinite fa fa-arrow-circle-down fa-4x" aria-hidden="true"></i></a>
+</map>
+</div>
+	
+		</header>
+
+    <header style="background:url(img/headermobile.png);background-size:100%" class="visible-xs visible-sm">
+      
+    </header>
+
+    <div id="empresa">
+      <div class="container">
+      <h2 style="margin-top:40px">Mascota es una empresa familiar de origen nacional, con mas de 30 años de trayectoria en la fabricacion de juegos infantiles.</h2>
+      <p style="margin-top:40px">A traves de los años estamos en constante crecimiento, ya sea por la incorporacion de nuevos productos al mercado o la ampliacion de nuevos puntos de venta en todo el territorio nacional.</p>
+      <p>En mascota nos interesa fabricar productos con gran resistencia y durabilidad, por tal motivo utilizamos caños de acero estructural de grueso espesor y pintura EPOXI para exterior asegurando el buen estado del producto por años.</p>
+      <p>Ante cualquier consulta que deseen realizarnos estamos a su disposicion, garantizandole una cordial atención.</p>
+      </div>
+    </div>
+
+		<div id="productos">
+
+			<br>
+
+      <h2 class="wow bounceInDown">Haz click en cualquiera de nuestros productos</h2>
+
+      <br><br>
+
+			<a href="productos.php?producto=calesitas"><div id="calesita" style="margin-top:30px" class="col-xs-12 col-sm-4 col-md-4 wow bounceInLeft">
+				<img src="img/calesitas.png" alt="">
+			</div></a>
+
+			<a href="productos.php?producto=toboganes"><div id="tobogan" class="col-xs-12 col-sm-4 col-md-4 wow bounceInUp">
+				<img src="img/toboganes.png" alt="">
+			</div></a>
+
+			<a href="productos.php?producto=hamacas"><div id="hamaca" class="col-xs-12 col-sm-4 col-md-4 wow bounceInRight">
+				<img src="img/hamacas.png" alt="">
+			</div></a>
+		</div>
+
+		<div id="presupuesto">
+      <br>
+			<h2>Si desea realizar su presupuesto porfavor dejenos sus datos.</h2>
+      <h3>*Solo venta a mayoristas</h3><br>
+
+      <i style="color:#446CB3" class="fa fa-info-circle fa-2x" aria-hidden="true"></i> <p style="font-weight:bold">Introducir la cantidad, seleccionar el producto y luego el numero de articulo.</p>
+      <p style="font-weight:bold">Si desea agregar otro campo clickear en el boton <i style="color:#26A65B" class="fa fa-plus" aria-hidden="true"></i></p>
+
+      <br><br>
+
+      <form action="enviarpresupuesto.php" method="post" class="form-inline">
+        
+        <div class="form-group" style="margin-left:15px">
+          <i class="fa fa-user fa-fw" aria-hidden="true"></i>
+          <input type="text" class="form-control" name="nombre" placeholder="Nombre">
+        </div>
+
+        <div class="form-group" style="margin-left:15px">
+          <i class="fa fa-envelope fa-fw" aria-hidden="true"></i>
+          <input type="text" class="form-control" name="mail" placeholder="Email">
+        </div>
+
+        <div class="form-group" style="margin-left:15px">
+          <i class="fa fa-phone fa-fw" aria-hidden="true"></i>
+          <input type="text" class="form-control" name="telefono" placeholder="Telefono">
+        </div>
+
+        <div style="margin-top:30px" class="col-md-12">
+        <div class="form-group">
+          <input id="probando" name="cant1" type="text" class="form-control" placeholder="Cant.">
+          <select name="art1" id="select1" class="form-control">
+              <option value="0">Seleccionar</option>
+              <option value="Tobogan">Tobogan</option>
+              <option value="Hamaca">Hamaca</option>
+              <option value="Calesita">Calesita</option>
+          </select>
+          <select  name="artnum1" id="artselect1" class="form-control">
+              <option value="0">Seleccionar</option>
+          </select>
+        </div>
+        </div>
+
+        <div class="cantidades col-md-12"></div>
+
+        <br>
+
+        <i onclick="agregarCampos()" style="margin-top:20px;cursor:pointer;color:#26A65B" class="fa fa-plus fa-2x" aria-hidden="true"></i>
+
+        <div style="margin-top:30px" class="col-md-12">
+          <textarea class="form-control" name="mensaje" cols="100" rows="5" placeholder="Consultas/Comentarios"></textarea>
+        </div>
+
+        <div style="margin-top:20px" class="col-md-12">
+        <input type="submit" class="btn btn-primary" value="Enviar">
+        </div>
+
+      </form>
+		</div>
+
+		<footer>
+      <a id="contacto"></a>
+
+      <div class="container">
+
+        <div class="col-md-4">
+      <i style="margin-top:30px;color:#F62459" class="fa fa-phone-square fa-2x" aria-hidden="true"></i> <p> 4484 - 1175</p> 
+      <i style="color:#22A7F0" class="fa fa-envelope fa-2x" aria-hidden="true"></i> <p>info@mascotarodados.com.ar</p>
+        </div>
+
+        <div class="col-md-8">
+
+      <form style="margin-top:30px" action="enviarcontacto.php" method="post" class="form-inline">
+
+        <div class="row">
+
+        <div class="form-group" style="margin-left:15px">
+          <input type="text" class="form-control" name="nombre" placeholder="Nombre">
+        </div>
+
+        <div class="form-group" style="margin-left:15px">
+          <input type="text" class="form-control" name="apellido" placeholder="Apellido">
+        </div>
+
+        </div>
+
+        <div style="margin-top:20px" class="row">
+
+        <div class="form-group" style="margin-left:15px">
+          <input type="text" class="form-control" name="mail" placeholder="Email">
+        </div>
+
+        <div class="form-group" style="margin-left:15px">
+          <input type="text" class="form-control" name="telefono" placeholder="Telefono">
+        </div>
+
+        </div>
+
+        <div style="margin-top:20px" class="row">
+          <textarea class="form-control" name="mensaje" cols="60" rows="5" placeholder="Consultas/Comentarios"></textarea>
+        </div>
+
+        <div style="margin-top:20px" class="row">
+          <input type="submit" class="btn btn-danger" value="Enviar">
+        </div>
+
+      </form>
+
+      </div>
+
+      </div>
+		</footer>
+	
+</body>
+</html>

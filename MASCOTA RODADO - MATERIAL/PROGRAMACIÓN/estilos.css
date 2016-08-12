@@ -1,0 +1,21 @@
+.fondoizq {
+	background-image: url(img/fondo_01.jpg);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+.fondoder {
+	background-image: url(img/fondo_03.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.tel {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.firma {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #249324;
+}
